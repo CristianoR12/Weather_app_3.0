@@ -6,11 +6,11 @@ import os
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
-API_key = os.environ['secret_key']
+API_key = os.environ['api_key']
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'any_key' 
+    app.secret_key = os.environ['secret_key'] 
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 

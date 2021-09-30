@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+
+{% block title%}
+Home
+{% endblock%}
+
+{% block content %} 
+
+<p>How is the weather in </p>
+
+<div class="city_name"> 
+  <form action="/weather" method="post">
+    <input autocomplete="off" autofocus name="city" placeholder="City name" type="text">  
+  </form>
+</div>
+
+<p>now?</p>   
+
+{% endblock %}

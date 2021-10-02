@@ -11,7 +11,6 @@ def index():
 
 @views.route('/weather', methods=['GET', 'POST'])
 def home():   
-
     if request.method == 'POST':        
         new_city = request.form.get('city')
 

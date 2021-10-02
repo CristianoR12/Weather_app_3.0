@@ -5,27 +5,11 @@ Home
 {% endblock%}
 
 {% block content %}  
-
-<form method="POST">
-  <div class="form-group">
-    <label for="city">City</label>
-    <input 
-        type="text" 
-        class="form-control" 
-        id="city" 
-        name="city" 
-        placeholder="Enter city"
-    />
+<div class="form-group" align="center">
+  <h3>How is the weather in</h3>
+    <form action="/weather" method="post">
+      <input autocomplete="off" autofocus name="city" placeholder="City name" type="text">  
+    </form>
+  <h3>now ?</h3>
 </div>
-<br />
-<button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<!--<p>How is the weather in </p>
-<div class="city_name"> 
-  <form action="/weather" method="post">
-    <input autocomplete="off" autofocus name="city" placeholder="City name" type="text">  
-  </form>
-</div>
-<p>now?</p> --> 
 {% endblock %}
